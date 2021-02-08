@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Grandma Types</h1>
+
+<p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = 'Hi Sonny, how was your day? Well do it quick because I haven\'t  got all day. Then, we can talk after dinner about how I love to talk to you. so, Do you think I type slowly?';
+var speed = 900;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+typeWriter();
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+font-family: Roboto;
+}
+</style>
+</body>
+</html>
